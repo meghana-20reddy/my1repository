@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form><fieldset>
+    <h1><strong> PERSONAL INFO</strong></h1>
+    <p>please fill the below details---</p>
+    <label for="name">ENTER UR NAME:</label>
+    <input type="text"id="name" required/>
+    <br>
+    <br>
+    <label for="mail">ENTER UR EMAIL:</label>
+    <input type="mail" id="mail" required/>
+    <br>
+    <br>
+    <label for="password">ENTER YOUR PASSWORD:</label>
+    <input type="password" id="password" required/>
+    <br>
+    <br>
+    <label for="confirm password">CONFIRM YOUR PASSWORD:</label>
+    <input type="password" id="password" required/>
+    <br>
+    <br>
+    <label for="phone">CONFIRM YOUR PHONENUMBER:</label>
+    <input type="tel" id="pHONE" pattern="[0-9]{10}" required/>
+    <br>
+    <br>
+        <label for="country">ENTER YOUR country</label>
+    <select id="text" required>
+        <option value="disabled selected">select your country</option>
+        <option value="INDIA">INDIA</option>
+        <option value="PAKISTAN">PAKISTAN</option>
+        <option value="USA">USA</option>
+        <option value="RUSSIA">RUSIIA</option>
+        <option value="UK">UK</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        </select>
+        <br>
+    <LABEL>ENTER YOUR GENDER:</LABEL>
+    <div class="gender-group">
+        <input type="radio" name="gender" value="male" id="male" required/>
+        <label for="male">MALE</label>
+        <input type="radio" name="gender" value="female" id="female" required/>
+        <label for="female" >FEMALE</label>
+        <input type="radio" name="gender" value="others" id="others" required/>
+        <label for="others">OTHERS</label>
+        </div>
+        <br>
+    
+    <label for="dob">ENTER YOUR DOB</label>
+    <input type="date" id="dob" requires><br>
+
+
+    <input type="submit" value="submit"  required/>
+    
+</fieldset>
+</form>
+</body>
+</html>
