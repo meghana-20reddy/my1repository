@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width:500px;height: 500px;background-color: rgb(143, 143, 70);"></div>
+      <button id="click me">clickmeSsss</button>
+    <script>
+        
+        let a=document.getElementById("box");
+        a.addEventListener("dblclick",
+            function(){
+        a.style.backgroundColor=
+
+        "lightcoral";
+        a.innerHTML="Double Clicked!";
+            });
+            a.addEventListener("mouseout",function(){
+            a.style.backgroundColor="lightblue"
+           });
+        document.getElementById("click me").addEventListener("click",function(){
+            alert("button was clicked");
+        })
+    </script>
+</body>
+</html>
