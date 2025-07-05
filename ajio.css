@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5a0707;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav ul.nav-links > li {
+  position: relative;
+  margin-left: 20px;
+}
+
+nav ul.nav-links > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  display: block;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.nav-links > li > a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #5a7b8d;
+  color: white;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px);
+  animation: scroll 20s linear infinite;
+  gap: 10px;
+}
+
+.slide-img {
+  width: 180px;  
+  height: 180spx;
+  border-radius: 4px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 3)); 
+  }
+}
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;       
+  gap: 20px;             
+  justify-content: center; 
+  padding: 10px;
+}
+
+.product-card {
+  flex:200px;      
+  max-width: 220px;      
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow:10px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-section p {
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #d35878;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.social-links li a {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #444;
+  border-radius: 4px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.social-links li a:hover {
+  background-color: #50716c;
+  color: #222;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+  font-size: 13px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+.cart-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 16px;
+  z-index: 1000;
+  display: none;
+}
+
+.cart-container.active {
+  display: block;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
